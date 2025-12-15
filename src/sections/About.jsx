@@ -1,26 +1,26 @@
 import React from 'react';
 import { Card } from '../components/ui/Card';
-import { Briefcase, Code, Globe } from 'lucide-react';
+import { Briefcase, Globe, Users } from 'lucide-react';
 
 export function About() {
     const experiences = [
         {
-            year: '2023 - Present',
+            year: '2025 - Present',
             role: 'Senior Amazon VA',
             company: 'Global Retail',
-            desc: 'Managing FBA operations, optimizing PPC campaigns with ACOS under 15%, and handling customer support.'
+            desc: 'Managing FBA operations, optimizing PPC campaigns with ACOS under 15%, handling customer support, and improving listing conversions.'
         },
         {
-            year: '2021 - 2023',
-            role: 'Web Developer',
-            company: 'Tech Solutions',
-            desc: 'Developed responsive e-commerce sites using React and Shopify. Improved site speed by 40%.'
+            year: '2023 - 2024',
+            role: 'Amazon VA',
+            company: 'E-commerce Clients',
+            desc: 'Provided comprehensive VA services including product research, listing optimization, order management, inventory control, and customer support.'
         },
         {
-            year: '2020 - 2021',
-            role: 'Freelance Specialist',
+            year: '2024 - 2025',
+            role: 'Freelance Amazon VA',
             company: 'Upwork',
-            desc: 'Provided VA services and frontend development for diverse international clients.'
+            desc: 'Supported multiple international clients in managing their Amazon stores efficiently, optimizing listings, and increasing sales performance.'
         }
     ];
 
@@ -31,7 +31,7 @@ export function About() {
                     <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">About Me</h2>
                     <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
                     <p className="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                        A versatile professional bridging the gap between E-commerce management and Technical implementation.
+                        Experienced Amazon Virtual Assistant bridging the gap between e-commerce management and technical support. I help businesses grow by managing FBA operations, optimizing listings, and providing top-notch customer support.
                     </p>
                 </div>
 
@@ -41,10 +41,10 @@ export function About() {
                     <div className="space-y-6">
                         <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Why Choose Me?</h3>
                         <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-                            I bring a unique dual-perspective to projects. As an expert Amazon Virtual Assistant, I understand the business logic, sales funnels, and customer psychology. As a Developer, I have the technical skills to build the tools and platforms that drive those sales.
+                            As a dedicated Amazon VA, I understand the nuances of the platform, from product listing optimization to order and customer management. I provide reliable and efficient support to ensure your Amazon business runs smoothly and profitably.
                         </p>
                         <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-                            Whether you need to optimize your Amazon listings or build a custom dashboard to track your sales, I deliver solutions that are not just code, but business assets.
+                            My goal is to help you save time, reduce errors, and increase sales while handling all operational tasks professionally.
                         </p>
 
                         <div className="grid grid-cols-3 gap-4 mt-6">
@@ -54,14 +54,14 @@ export function About() {
                                 <div className="text-sm text-slate-500">Experience</div>
                             </Card>
                             <Card className="text-center p-4">
-                                <Code className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                                <div className="font-bold text-slate-900 dark:text-white">50+</div>
-                                <div className="text-sm text-slate-500">Projects</div>
+                                <Users className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+                                <div className="font-bold text-slate-900 dark:text-white">20+</div>
+                                <div className="text-sm text-slate-500">Clients</div>
                             </Card>
                             <Card className="text-center p-4">
                                 <Globe className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                                <div className="font-bold text-slate-900 dark:text-white">20+</div>
-                                <div className="text-sm text-slate-500">Clients</div>
+                                <div className="font-bold text-slate-900 dark:text-white">50+</div>
+                                <div className="text-sm text-slate-500">Projects</div>
                             </Card>
                         </div>
                     </div>

@@ -22,9 +22,8 @@ export function Home() {
               Amazon VA
             </p>
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
-              I help businesses grow by combining e-commerce expertise with
-              advanced web solutions. Building modern, high-converting digital
-              experiences.
+              Experienced Amazon Virtual Assistant specializing in e-commerce
+              management and technical support to boost business growth.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
