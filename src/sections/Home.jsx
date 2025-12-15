@@ -15,7 +15,7 @@ export function Home() {
             <h2 className="text-xl md:text-2xl font-semibold text-blue-600 dark:text-blue-400">
               Hello, I'm
             </h2>
-            <h1 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white tracking-tight">
+            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white tracking-tight">
               Muhammad <span className="text-blue-600">Rehman</span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 font-medium">
