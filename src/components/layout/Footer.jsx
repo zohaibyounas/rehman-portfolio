@@ -15,7 +15,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <div className="text-center md:text-left">
             <h3 className="text-xl font-bold text-slate-800 dark:text-white">
-              Portfolio<span className="text-blue-600">.</span>
+              Muhammad <span className="text-blue-600">Rehman</span>
             </h3>
             <p className="mt-2 text-slate-600 dark:text-slate-400">
               Building digital experiences with passion.
