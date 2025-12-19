@@ -43,7 +43,7 @@ export function Footer() {
             </a>
 
             <a
-              href="mailto:contact@example.com"
+              href="mailto:rehmanu303@gmail.com"
               className="text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors"
             >
               <Mail size={20} />

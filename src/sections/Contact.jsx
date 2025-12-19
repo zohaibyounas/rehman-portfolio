@@ -1,14 +1,42 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Button } from "../components/ui/Button";
 import { Card } from "../components/ui/Card";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 
 export function Contact() {
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_eoz08mr", // your service ID
+        "template_r4mztx9", // your template ID
+        formRef.current,
+        "hWih82XdPPYIMBnSP" // your public key
+      )
+      .then(
+        () => {
+          toast.success("Message sent successfully!");
+          formRef.current.reset();
+        },
+        (error) => {
+          toast.error("Failed to send message. Try again.");
+          console.error(error);
+        }
+      );
+  };
+
   return (
     <section
       id="contact"
       className="py-20 bg-white dark:bg-slate-800 transition-colors duration-300"
     >
+      <Toaster position="top-right" reverseOrder={false} />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
@@ -28,8 +56,8 @@ export function Contact() {
               Contact Information
             </h3>
             <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-              I'm essentially available for freelance work and open to full-time
-              opportunities. Feel free to reach out via email or the form.
+              I'm available for freelance work and open to full-time
+              opportunities. Reach out via email or the form.
             </p>
 
             <div className="space-y-6">
@@ -65,7 +93,7 @@ export function Contact() {
                   <div className="font-bold text-slate-900 dark:text-white">
                     Location
                   </div>
-                  <div>Remote / Islamabad pakistan</div>
+                  <div>Remote / Islamabad, Pakistan</div>
                 </div>
               </div>
             </div>
@@ -73,7 +101,7 @@ export function Contact() {
 
           {/* Contact Form */}
           <Card className="p-8">
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" ref={formRef} onSubmit={sendEmail}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label
@@ -85,6 +113,8 @@ export function Contact() {
                   <input
                     type="text"
                     id="name"
+                    name="form_name"
+                    required
                     className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-600 text-slate-900 dark:text-white transition-colors"
                     placeholder="John Doe"
                   />
@@ -99,25 +129,12 @@ export function Contact() {
                   <input
                     type="email"
                     id="email"
+                    name="email"
+                    required
                     className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-600 text-slate-900 dark:text-white transition-colors"
                     placeholder="john@example.com"
                   />
                 </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="subject"
-                  className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
-                >
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-600 text-slate-900 dark:text-white transition-colors"
-                  placeholder="Project Inquiry"
-                />
               </div>
 
               <div>
@@ -129,7 +146,9 @@ export function Contact() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows="4"
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-600 text-slate-900 dark:text-white transition-colors resize-none"
                   placeholder="Tell me about your project..."
                 ></textarea>
