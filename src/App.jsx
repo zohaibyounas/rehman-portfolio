@@ -1,11 +1,12 @@
-import React from 'react';
-import { Navbar } from './components/layout/Navbar';
-import { Footer } from './components/layout/Footer';
-import { Home } from './sections/Home';
-import { About } from './sections/About';
-import { Skills } from './sections/Skills';
-import { Portfolio } from './sections/Portfolio';
-import { Contact } from './sections/Contact';
+import React from "react";
+import { Navbar } from "./components/layout/Navbar";
+import { Footer } from "./components/layout/Footer";
+import { Home } from "./sections/Home";
+import { About } from "./sections/About";
+import { Skills } from "./sections/Skills";
+import { Portfolio } from "./sections/Portfolio";
+import { Contact } from "./sections/Contact";
+import { Experience } from "./sections/Experience";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <main>
         <Home />
         <About />
+        <Experience />
         <Skills />
         <Portfolio />
         <Contact />

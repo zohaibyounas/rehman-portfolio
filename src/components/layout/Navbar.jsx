@@ -24,7 +24,7 @@ export function Navbar() {
               href="/"
               className="font-bold text-2xl text-slate-800 dark:text-white"
             >
-              Muhammad <span className="text-blue-600">Rehman</span>
+              Rehman <span className="text-blue-600">Ullah</span>
             </a>
           </div>
 

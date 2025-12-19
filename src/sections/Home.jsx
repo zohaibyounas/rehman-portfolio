@@ -6,7 +6,7 @@ export function Home() {
   return (
     <section
       id="home"
-      className="pt-24 pb-12 md:pt-32 md:pb-24 overflow-hidden"
+      className="pt-24 pb-12 md:pt-32 md:pb-24 overflow-hidden lg:mx-12"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
@@ -16,7 +16,7 @@ export function Home() {
               Hello, I'm
             </h2>
             <h1 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white tracking-tight">
-              Muhammad <span className="text-blue-600">Rehman</span>
+              Rehman <span className="text-blue-600">Ullah</span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 font-medium">
               Amazon VA
@@ -33,9 +33,11 @@ export function Home() {
               >
                 Hire Me <ArrowRight size={20} />
               </Button>
-              <Button variant="outline" className="flex items-center gap-2">
-                Download CV <Download size={20} />
-              </Button>
+              <a href="/Resume-Rehman-Ullah.pdf" download>
+                <Button variant="outline" className="flex items-center gap-2">
+                  Download CV <Download size={20} />
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -44,7 +46,7 @@ export function Home() {
             <div className="relative w-64 h-64 md:w-96 md:h-96">
               <div className="absolute inset-0 bg-blue-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
               <img
-                src="/romi.jpg"
+                src="/rehman.jpg"
                 alt="Profile"
                 className="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-slate-800 shadow-2xl"
               />

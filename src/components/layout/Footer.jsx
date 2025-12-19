@@ -15,7 +15,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <div className="text-center md:text-left">
             <h3 className="text-xl font-bold text-slate-800 dark:text-white">
-              Muhammad <span className="text-blue-600">Rehman</span>
+              Rehman <span className="text-blue-600"> Ullah</span>
             </h3>
             <p className="mt-2 text-slate-600 dark:text-slate-400">
               Building digital experiences with passion.
@@ -24,7 +24,7 @@ export function Footer() {
 
           <div className="flex space-x-6">
             <a
-              href="#"
+              href="https://www.facebook.com/share/17rwisfoLN/"
               className="text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors"
             >
               <Facebook size={20} />

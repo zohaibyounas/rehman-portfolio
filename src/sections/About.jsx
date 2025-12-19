@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "../components/ui/Card";
-import { Briefcase, Globe, Users } from "lucide-react";
+import { Briefcase, Globe, Users, CheckCircle } from "lucide-react";
 
 export function About() {
   const experiences = [
@@ -24,8 +24,26 @@ export function About() {
     },
   ];
 
+  const services = [
+    "Full Amazon VA (A to Z) Services",
+    "Wholesale & Private Label Account Management",
+    "Product Hunting & Brand Hunting",
+    "Keyword Research & Market Analysis",
+    "Emailing & Calling Brands for Approvals",
+    "Product Hunting from Price Lists",
+    "Product Sourcing & Supplier Management",
+    "Complete Amazon Account Handling",
+    "Sourcing & Logistics Coordination",
+    "Listing Creation & Optimization",
+    "Product Launching & Ranking",
+    "PPC Campaign Management & Hyper Launch",
+  ];
+
   return (
-    <section id="about" className="py-20 bg-slate-50 dark:bg-slate-900/50">
+    <section
+      id="about"
+      className="py-20 bg-slate-50 dark:bg-slate-900/50 lg:mx-12"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
@@ -33,10 +51,8 @@ export function About() {
           </h2>
           <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
           <p className="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Experienced Amazon Virtual Assistant bridging the gap between
-            e-commerce management and technical support. I help businesses grow
-            by managing FBA operations, optimizing listings, and providing
-            top-notch customer support.
+            Experienced Amazon Virtual Assistant providing complete A to Z
+            solutions for wholesale and private label sellers.
           </p>
         </div>
 
@@ -47,17 +63,30 @@ export function About() {
               Why Choose Me?
             </h3>
             <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-              As a dedicated Amazon VA, I understand the nuances of the
-              platform, from product listing optimization to order and customer
-              management. I provide reliable and efficient support to ensure
-              your Amazon business runs smoothly and profitably.
-            </p>
-            <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-              My goal is to help you save time, reduce errors, and increase
-              sales while handling all operational tasks professionally.
+              I provide full Amazon Virtual Assistant (VA) A to Z services,
+              helping sellers manage and scale their wholesale and private label
+              businesses efficiently across different marketplaces.
             </p>
 
-            <div className="grid grid-cols-3 gap-4 mt-6">
+            {/* SERVICES */}
+            <div>
+              <h4 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Services I Provide
+              </h4>
+              <ul className="grid sm:grid-cols-2 gap-3">
+                {services.map((service, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-slate-600 dark:text-slate-300"
+                  >
+                    <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                    <span>{service}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="grid grid-cols-3 gap-4 mt-8">
               <Card className="text-center p-4">
                 <Briefcase className="w-8 h-8 text-blue-600 mx-auto mb-2" />
                 <div className="font-bold text-slate-900 dark:text-white">
